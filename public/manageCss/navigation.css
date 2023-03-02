@@ -1,0 +1,221 @@
+/* 滚动条样式       */
+::-webkit-scrollbar {
+    width:5px;
+}
+::-webkit-scrollbar-thumb {
+    background:#fff;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background:#fff;
+}
+#app{
+    margin-top: 80px;
+}
+/*页面黑色背景图*/
+.xiaoming_back_ground {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: 'ubunturegular';
+    background-color: #000;
+    color: #ccc;
+    background-image: url(../images/bg.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+/*页面导航条*/
+header {
+    height: 80px;
+    width: 100%;
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9);
+    position:fixed;
+}
+header img {
+    outline:none;
+    border:none;
+    float:left;
+    margin-right:20px;
+    height:80px;
+}
+header h1 {
+    padding-left:20px;
+    font-family:'dosisbold';
+    font-weight:bold;
+    color:#fff;
+    text-transform:uppercase;
+    font-size:60px;
+    line-height:80px;
+}
+header h1 {
+    -webkit-animation: fadeInLeft 1s ease-in-out 1s backwards;
+    -moz-animation: fadeInLeft 1s ease-in-out 1s backwards;
+    -o-animation: fadeInLeft 1s ease-in-out 1s backwards;
+    -ms-animation: fadeInLeft 1s ease-in-out 1s backwards;
+    animation: fadeInLeft 1s ease-in-out 1s backwards;
+}
+/*animate.css  header从左到右实现*/
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+
+@-o-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -o-transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -o-transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    -o-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+
+/* 导航菜单栏*/
+#account,#blog{
+    /*-webkit-transition:all 0.4s ease-in-out;*/
+    /*-moz-transition:all 0.4s ease-in-out;*/
+    /*-o-transition:all 0.4s ease-in-out;*/
+    /*-ms-transition:all 0.4s ease-in-out;*/
+    z-index:9999999;
+    background-color:#c21e0a;
+    position:fixed;
+    height:80px;
+    width:80px;
+    cursor:pointer;
+    display:none;
+}
+#account:hover,#blog:hover{
+    background-color:#fff;
+}
+#account{
+    top:0;
+    right:0;
+    background-position:center center;
+    background-image:url('../images/account2.png');
+    background-repeat:no-repeat;
+}
+#account:hover {
+    background-image:url('../images/account.png');
+}
+#accountID{
+    display: none;
+}
+#homepageID{
+    display: none;
+}
+#blog {
+    top:0;
+    right:80px;
+    background-position:center center;
+    background-image:url('../images/blog.png');
+    background-repeat:no-repeat;
+}
+#blog:hover {
+    background-image:url('../images/blog2.png');
+}
+/*菜单导航栏实现晃动*/
+.info {
+    position:fixed;
+    top:80px;
+    z-index:9999999;
+    background-color:#c21e0a;
+    width:80px;
+    padding-top:10px;
+    padding-bottom:10px;
+    color:#fff;
+    text-align:center;
+    display:none;
+    line-height: 1.8;
+}
+@-webkit-keyframes tada {
+    0% {-webkit-transform: scale(1);}
+    10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
+    30%, 50%, 70%, 90% {-webkit-transform: scale(1.1) rotate(3deg);}
+    40%, 60%, 80% {-webkit-transform: scale(1.1) rotate(-3deg);}
+    100% {-webkit-transform: scale(1) rotate(0);}
+}
+
+@-moz-keyframes tada {
+    0% {-moz-transform: scale(1);}
+    10%, 20% {-moz-transform: scale(0.9) rotate(-3deg);}
+    30%, 50%, 70%, 90% {-moz-transform: scale(1.1) rotate(3deg);}
+    40%, 60%, 80% {-moz-transform: scale(1.1) rotate(-3deg);}
+    100% {-moz-transform: scale(1) rotate(0);}
+}
+
+@-o-keyframes tada {
+    0% {-o-transform: scale(1);}
+    10%, 20% {-o-transform: scale(0.9) rotate(-3deg);}
+    30%, 50%, 70%, 90% {-o-transform: scale(1.1) rotate(3deg);}
+    40%, 60%, 80% {-o-transform: scale(1.1) rotate(-3deg);}
+    100% {-o-transform: scale(1) rotate(0);}
+}
+
+@keyframes tada {
+    0% {transform: scale(1);}
+    10%, 20% {transform: scale(0.9) rotate(-3deg);}
+    30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
+    40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
+    100% {transform: scale(1) rotate(0);}
+}
+
+.tada {
+    -webkit-animation-name: tada;
+    -moz-animation-name: tada;
+    -o-animation-name: tada;
+    animation-name: tada;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
